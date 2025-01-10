@@ -12,6 +12,7 @@ for(int index = 0; index < nums.length; index++) {
 ## return的作用
 结束函数执行，并返回一个值（如果指定的话）。
 ## 数组
+java数组是固定长度的，一旦声明后大小就不能改变
 ### 赋值
 在同一句里完成分配 + 赋值:
 ```java
