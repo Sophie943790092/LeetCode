@@ -111,4 +111,49 @@ System.out.println(p); //输出1
 p = 0;
 System.out.println(++p); //输出1（先加 1，再输出）
 ```
+## 哈希表
+Java里哈希表常用的类是HashMap<K, V>, 其中：
+* K 是 key键的类型
+* V 是 value值的类型
 
+**声明&新建哈希表**
+```java
+//键是Interger， 值是String
+Map<Integer, String> map = new HashMap<>();
+```
+常用导入：
+```java
+import java.util.HashMap;
+import java.util.Map;
+```
+
+**插入元素**
+```java
+map.put(key, value);//插入一个键值对
+```
+示例：
+```java
+map.put(1, "apple");
+map.put(2, "banana");
+```
+**注意**：如果key已经存在，put会覆盖原来的值。
+
+**查找元素**
+```java
+map.containsKey(key) //判断key是否存在
+map.get(key)  //根据key获取value（如果不存在则返回null）
+```
+示例：
+```java
+if(map.containsKey(2)){
+    System.out.println(map.get(2)); //输出banana
+}
+```
+**更新元素**
+
+直接使用put就行，因为HashMap会覆盖已有的值
+
+**删除元素**
+```java
+map.remove(key);
+```
