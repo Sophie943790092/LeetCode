@@ -112,9 +112,29 @@ p = 0;
 System.out.println(++p); //输出1（先加 1，再输出）
 ```
 ## 哈希表
-Java里哈希表常用的类是HashMap<K, V>, 其中：
-* K 是 key键的类型
-* V 是 value值的类型
+
+### HashMap 里 **key** 和 **value** 的唯一性
+
+**key（键）**：在一个 `HashMap` 中 **必须唯一**。
+
+- 如果你再次 `put` 相同的 key，新 value 会覆盖旧 value。
+
+比如：
+
+```java
+Map<Character, Integer> map = new HashMap<>();
+map.put('a', 1);
+map.put('a', 5);
+System.out.println(map.get('a')); // 输出 5
+```
+
+**value（值）**：可以重复，没有限制。
+
+
+
+Java里哈希表常用的类是`HashMap<K, V>`, 其中：
+* `K` 是 key键的类型
+* `V` 是 value值的类型
 
 **声明&新建哈希表**
 ```java
@@ -136,7 +156,7 @@ map.put(key, value);//插入一个键值对
 map.put(1, "apple");
 map.put(2, "banana");
 ```
-**注意**：如果key已经存在，put会覆盖原来的值。
+**注意**：如果key已经存在，put会**覆盖**原来的值。
 
 **查找元素**
 ```java
