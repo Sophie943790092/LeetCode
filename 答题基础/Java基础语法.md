@@ -177,3 +177,26 @@ if(map.containsKey(2)){
 ```java
 map.remove(key);
 ```
+
+### map.getOrDefault(key, defaultValue)
+
+**参数**：
+
+`key`：你要查找的键
+
+`defaultValue`：如果找不到这个键时，返回的默认值
+
+**返回值**：
+
+如果 `map` 里有这个 `key`，返回对应的 `value`
+
+如果没有，返回你给的 `defaultValue`
+
+**和 `get` 的区别**
+
+- `map.get(key)`
+  - 如果 key 存在 → 返回对应 value
+  - 如果 key 不存在 → 返回 `null`（需要额外判断）
+- `map.getOrDefault(key, defaultValue)`
+  - 如果 key 存在 → 返回对应 value
+  - 如果 key 不存在 → 直接返回 `defaultValue`（不会是 `null`）
